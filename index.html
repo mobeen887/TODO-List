@@ -14,7 +14,9 @@
       crossorigin="anonymous"
     />
     <link href="css/index.css" rel="stylesheet" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+     integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+     crossorigin="anonymous"></script>
     <title>Task List</title>
   </head>
   <body>
@@ -109,6 +111,36 @@
       </div>
      <!---//Modal for add more Todo data--->
 
+     <!---Modal for edit Todo data--->
+    <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="form-floating mb-3">
+                  <input type="title" class="form-control" id="title" aria-describedby="title" placeholder="Enter title for the list....">
+                  <label for="title" class="form-label">Title</label>
+              </div>
+              <div class="form-floating">
+                  <textarea class="form-control" id="description" placeholder="Enter Description of the task..."></textarea>
+                  <label for="description" class="form-label">Description</label>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <div class="btn-group" role="group">
+                  <button type="submit" id="add" class="btn btn-sm btn-outline-primary">Update List</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+   <!---//Modal for edit Todo data--->
+     
     <!-- <h2 class="text-center">Task List</h2> -->
     <div class="container col-12">
         <div id="items" class="my-4">
